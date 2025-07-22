@@ -22,4 +22,4 @@
              run:  chmod +x ./demo.sh
             
            - name: execute the file
-             run:  ./demo.sh
+             run:  bash ./demo.sh
