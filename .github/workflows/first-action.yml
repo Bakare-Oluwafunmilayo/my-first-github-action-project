@@ -3,11 +3,21 @@
  on: [workflow_dispatch]
 
  jobs:
-    first_jobs:
+    first_jobs: #first job
        runs-on: ubuntu-latest
        steps: 
           - name: say hello world
             run: echo "Hello World"
 
           -  name: display user
-             run: echo (whoami)
+             run: echo $(whoami)
+
+    second_job: #second job
+       runs-on:  ubuntu-latest
+       steps:
+           - name: checkout code repository
+             uses: actions/checkout@v4
+           - name: set permission and execute script
+             run: |
+                 chmod +x ./demo.sh
+                 ./demo.sh
