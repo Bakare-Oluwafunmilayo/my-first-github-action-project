@@ -17,7 +17,9 @@
        steps:
            - name: checkout code repository
              uses: actions/checkout@v4
+
            - name: set permission and execute script
-             run: |
-                 chmod +x ./demo.sh
-                 ./demo.sh
+             run:  chmod +x ./demo.sh
+            
+           - name: execute the file
+             run:  ./demo.sh
