@@ -10,4 +10,4 @@
             run: echo "Hello World"
 
           -  name: display user
-             run: echo (whoami)
+             run: echo $(whoami)
